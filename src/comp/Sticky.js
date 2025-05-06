@@ -1,22 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import Sticky_header from "./Sticky_header";
-import Sticky_nav from "./Sticky_nav";
+import StickyHeader from "./StickyHeader";
+import StickyNav from "./StickyNav";
 
 const Header = styled.div`
   height: 217px;
   padding: 40px 48px 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Sticky = () => {
   return (
-    <div>
-      <Header>
-        <Sticky_header />
-      </Header>
-    </div>
+    <Header>
+      <StickyHeader />
+      <StickyNav />
+    </Header>
   );
 };
 

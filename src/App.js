@@ -1,6 +1,5 @@
 import { Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Sticky from "./comp/Sticky";
 import Main from "./pages/Main";
 
 function App() {
