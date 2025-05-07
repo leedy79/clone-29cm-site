@@ -8,8 +8,8 @@ const MainRightWrap = styled.div`
   flex-wrap: wrap;
   width: 56%;
   position: relative;
-  width: 100%;
-  max-width: 100%;
+  /* width: 100%;
+  max-width: 100%; */
   /* max-height: 12000px; */
 `;
 

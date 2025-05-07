@@ -4,6 +4,7 @@ import data from "../../db/mainLeft";
 import { useState } from "react";
 
 const MainLeftWrap = styled.div`
+  /* position: relative; */
   /* background-color: grey; */
   /* display: block; */
   width: 44%;
