@@ -5,14 +5,12 @@ import MainLeft from "../comp/main/MainLeft";
 import MainRight from "../comp/main/MainRight";
 import Footer from "../comp/Footer";
 
-
 const MainWrap = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  max-height: 12000px;
+  /* max-height: 12000px; */
 `;
-
 
 const Main = () => {
   return (

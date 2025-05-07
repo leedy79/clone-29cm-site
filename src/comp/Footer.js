@@ -11,10 +11,9 @@ const FooterWrap = styled.div`
   padding: 20px 48px 48px;
 `;
 const Hr = styled.hr`
-  border-top-width: 1px;
-  border-color: #e4e4e4
+  border-top: 1px;
+  border-color: #e4e4e4;
 `;
-
 
 const Footer = () => {
   return (
