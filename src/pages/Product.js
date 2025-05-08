@@ -6,8 +6,8 @@ import Footer from "../comp/Footer";
 
 const Wrap = styled.div`
   display: flex;
-  position: relative;
-  overflow: hidden;
+  /* position: relative;
+  overflow: hidden; */
   /* max-height: 12000px; */
 `;
 
@@ -15,9 +15,7 @@ const Main = () => {
   return (
     <div>
       <Header />
-      <Wrap>
-        <Product></Product>
-      </Wrap>
+      <Product></Product>
       <Footer />
     </div>
   );

@@ -4,178 +4,91 @@ import data from "../../db/collectionProd";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const ProductWrap = styled.div`
-  /* background-color: grey; */
-  display: grid;
-  gap: 0 20px;
-  min-width: 700px;
-  padding: 40px 50px 90px;
-  grid-template-columns: repeat(12, 1fr);
-  .title-box {
-    grid-column: 3 / span 8;
+const CategoryWrap = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 5px;
+  padding-top: 35px;
+  justify-content: center;
+  align-items: center;
+  .category {
     display: flex;
-    flex-direction: column;
-  }
-  .title {
-    width: 480px;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 58px;
-    white-space: pre-wrap;
-  }
-  .desc {
-    width: 580px;
-    line-height: 24px;
-    margin-top: 12px;
-    white-space: pre-line;
-  }
-  .countdown-box {
-    grid-column: 3 / span 8;
-    display: flex;
-    flex-direction: column;
-    margin: 30px 0px 60px;
-  }
-  .time-bar-border {
-    height: 2px;
-    border-top: 2px solid #ccc;
-    padding-top: 12px;
-  }
-  .time-bar {
-    height: 2px;
-    background-color: #ff4800;
-    margin-top: -13px;
-  }
-  .countdown {
-    line-height: 22px;
-    color: #ff4800;
-    font-weight: 400;
-  }
-  .end-date {
-    line-height: 22px;
-    color: #ccc;
-    font-weight: 400;
-    margin-top: -23px;
-    text-align: right;
-  }
-  .product-block {
-    grid-column: 3 / span 8;
-    padding-bottom: 200px;
-  }
-  .sortBtn-box {
-    display: flex;
-    margin-top: -26px;
-    padding-bottom: 18px;
-  }
-  .sortBtn-box button {
-    position: relative;
-    margin-right: 6px;
-    padding: 7px 28px 6px 14px;
-    font-size: 13px;
-    font-weight: 500;
-    color: #5d5d5d;
-    border: 1px solid #e4e4e4;
-    border-radius: 24px;
-  }
-  .sortBtn-box img {
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    top: 10px;
-    right: 11px;
-    vertical-align: middle;
-  }
-  .product-list {
-    display: grid;
     justify-content: center;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    column-gap: 20px;
-    row-gap: 40px;
-    margin-bottom: 94px;
-    padding-bottom: 24px;
-    align-self: baseline;
+    align-items: center;
   }
-  .product {
+  .categoryName {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .product-box {
+  .categoryName:not(:first-of-type)::before {
+    content: "/";
+    margin: 0 10px;
+    font-size: 22px;
+    font-weight: 100;
+    color: #5d5d5d;
+  }
+  .categoryName img {
+    width: 24px;
+    height: 24px;
+  }
+  .categoryName span {
+    font-size: 15px;
+    margin-right: 8px;
+  }  
+`;
+const ProductPurchaseWrap = styled.div`
+  min-width: 900px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 50px 0;
+  .brand-box {
+    margin-bottom: 16px;
+  }
+  .brand-link {
     display: flex;
-    flex-direction: column;
-
-    /* justify-content: space-between; */
-    gap: 8px;
-    align-items: stretch;
-  }
-  .product-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2px;
-    flex: 1 1 0%;
-  }
-  .product-box > img {
+    align-items: center;
     width: 100%;
-    height: 100%;
+  }
+  .brand-link img {
+    width: 74px;
+    height: 74px;
+  }
+  .brand-info-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 14px;
   }
   .brand {
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
   }
-  .name {
-    font-size: 12px;
+  .desc {
+    font-size: 13px;
   }
-  .price-box {
+  .brand-home {
     display: flex;
-    gap: 2px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-top: 6px;
   }
-  .price {
-    font-size: 14px;
-    font-weight: 700;
+  .brand-home-btn {
+    /* min-width: 40px;
+    min-height: 25px;
+    display: inline; */
+    padding: 0 9px;
+    font-size: 11px;
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
   }
-  .discount {
-    font-size: 14px;
-    font-weight: 700;
-    color: #ff4800;
-    display: inline-block;
-  }
-  .like-rating-box {
+  .purchase-detail-box {
     display: flex;
-    align-items: center;
-    gap: 2px;
-  }
-  .like-rating {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-  }
-  .like-box img {
-    width: 12px;
-    height: 12px;
-  }
-  .like-rating-text {
-    font-size: 10px;
-    color: #5d5d5da3;
+    align-items: flex-start;
+    width: 100%;
   }
 
-  .btn-more {
-    margin-top: 30px;
-  }
-  .btn-more button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 58px;
-    font-size: 15px;
-    font-weight: bold;
-    color: #000;
-    border: 1px solid #000;
-  }
-  .btn-more img {
-    width: 12px;
-    height: 12px;
-    margin-left: 8px;
-  }
 `;
 
 const ProductDetail = () => {
@@ -183,100 +96,69 @@ const ProductDetail = () => {
   const navigate = useNavigate();
 
   return (
-    <ProductWrap>
-      <div className="title-box">
-        <h1 className="title">쿠폰 혜택으로 만나는 액티브웨어</h1>
-        <p className="desc">30% 쿠폰 적용 가능한 상품만 모았어요.</p>
-      </div>
-      <div className="countdown-box">
-        <div className="time-bar-border">
-          <div className="time-bar"></div>
-        </div>
-        <div className="countdown">
-          <span>6일 </span>
-          <span>07:43:30</span> 남음
-        </div>
-        <div className="end-date">05.14</div>
-      </div>
-
-      <div className="product-block">
-        <div className="sortBtn-box">
-          <div>
-            <div>
-              <button>
-                베스트순
-                <img
-                  src={process.env.PUBLIC_URL + "/img/main_svg/arrow_more.svg"}
-                  alt=""
-                />
-              </button>
+    <>
+      <CategoryWrap>
+        <ul className="category">
+          <li className="categoryName"><span>여성의류</span><img src={process.env.PUBLIC_URL + "/img/main_svg/more_circle.svg"} alt="categoryName"/></li>
+          <li className="categoryName"><span>바지</span><img src={process.env.PUBLIC_URL + "/img/main_svg/more_circle.svg"} alt="categoryName"/></li>
+          <li className="categoryName"><span>트레이닝</span><img src={process.env.PUBLIC_URL + "/img/main_svg/more_circle.svg"} alt="categoryName"/></li>
+        </ul>
+      </CategoryWrap>
+      <ProductPurchaseWrap>
+        <div className="brand-box">
+          <a className="brand-link" href="#">
+            <img src={process.env.PUBLIC_URL + "/img/detail/brand_img.webp"} alt=""/>
+            <div className="brand-info-box">
+              <h3 className="brand">프라크티</h3>
+              <p className="desc">프라크티는 요가와 삶을 연결시키며 다채로운 컬러를 사랑하는 브랜드입니다.</p>
+              <div className="brand-home">
+                <button className="brand-home-btn">BRAND HOME</button>
+              </div>
             </div>
+          </a>
+        </div>
+        <div className="purchase-detail-box">
+          <div className="product-img-box">
+            <div className="product-img-slider">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>            
+            <div className="product-img-slider-btn">
+              <button><img src="" alt=""/></button>
+              <button><img src="" alt=""/></button>
+            </div>
+            <ul className="product-img-presentation">
+              <li><button></button></li>
+              <li><button></button></li>
+              <li><button></button></li>
+              <li><button></button></li>
+              <li><button></button></li>
+              <li><button></button></li>
+            </ul>
+          </div>
+          <div className="purchase-box">
+            <div></div>
+            <div></div>
+            <hr></hr>
+            <div></div>
+            <div></div>
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+            <div></div>
           </div>
         </div>
-        {/* 제품 리스트 */}
-        <div className="product-list">
-          {item.map((product, i) => (
-            <li key={product.id}>
-              <div onClick={() => navigate(`/product/${product.id}`)}>
-                <div className="product-box">
-                  <img
-                    src={process.env.PUBLIC_URL + "/" + product.image}
-                    alt={product.name}
-                  />
-                  <div className="product-info">
-                    <p className="brand">{product.brand}</p>
-                    <p className="name">{product.name}</p>
-                    <div className="price-box">
-                      {product.discount && (
-                        <span className="discount">{product.discount}</span>
-                      )}
-                      <span className="price">{product.price}</span>
-                    </div>
-                  </div>
-                  <div className="like-rating-box">
-                    <button className="like-rating">
-                      <img
-                        className="icon-like"
-                        src={
-                          process.env.PUBLIC_URL +
-                          "/img/main_svg/fill_heart.svg"
-                        }
-                        alt="like"
-                      />
-                      <span className="like-rating-text">{product.likes}</span>
-                    </button>
-                    <button className="like-rating">
-                      <img
-                        className="icon-rating"
-                        src={
-                          process.env.PUBLIC_URL + "/img/main_svg/fill_star.svg"
-                        }
-                        alt="rating"
-                      />
-                      <span className="like-rating-text">
-                        {product.rating.score}
-                        {"("}
-                        {product.rating.count}
-                        {")"}
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </li>
-          ))}
-        </div>
-        <div className="btn-more">
-          <button>
-            상품 더보기
-            <img
-              src={process.env.PUBLIC_URL + "/img/main_svg/arrow_more.svg"}
-              alt="more"
-            />
-          </button>
-        </div>
-      </div>
-    </ProductWrap>
+
+        
+      </ProductPurchaseWrap>
+    </>
   );
 };
 
