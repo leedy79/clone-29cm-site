@@ -103,7 +103,7 @@ const FooterSect3 = () => {
         </div>
       </div>
       <a className="escrowBox" href="#">
-        <img src="img/escrow.jpg" alt="escrow" />
+        <img src={process.env.PUBLIC_URL + "/img/escrow.jpg"} alt="escrow" />
         <span>
           KG 에스크로
           <br />

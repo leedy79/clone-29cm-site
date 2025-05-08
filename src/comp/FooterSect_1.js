@@ -75,25 +75,37 @@ const FooterSect1 = () => {
         <div className="buttonWrapInner">
           <a className="button" href="#">
             FAQ
-            <img src="img/forward.png" alt="" />
+            <img src={process.env.PUBLIC_URL + "/img/forward.png"} alt="" />
           </a>
           <a className="button" href="#">
             1:1문의
-            <img src="img/forward.png" alt="" />
+            <img src={process.env.PUBLIC_URL + "/img/forward.png"} alt="" />
           </a>
         </div>
         <div className="snsBox">
           <a className="snsItem" href="#">
-            <img src="img/main_svg/instagram_w.svg" alt="" />
+            <img
+              src={process.env.PUBLIC_URL + "/img/main_svg/instagram_w.svg"}
+              alt=""
+            />
           </a>
           <a className="snsItem" href="#">
-            <img src="img/main_svg/youtube_w.svg" alt="" />
+            <img
+              src={process.env.PUBLIC_URL + "/img/main_svg/youtube_w.svg"}
+              alt=""
+            />
           </a>
           <a className="snsItem" href="#">
-            <img src="img/main_svg/apple_w.svg" alt="" />
+            <img
+              src={process.env.PUBLIC_URL + "/img/main_svg/apple_w.svg"}
+              alt=""
+            />
           </a>
           <a className="snsItem" href="#">
-            <img src="img/main_svg/playstore_w.svg" alt="" />
+            <img
+              src={process.env.PUBLIC_URL + "/img/main_svg/playstore_w.svg"}
+              alt=""
+            />
           </a>
         </div>
       </div>

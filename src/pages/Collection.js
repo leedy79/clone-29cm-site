@@ -1,30 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../comp/Sticky";
-import MainLeft from "../comp/main/MainLeft";
-import MainRight from "../comp/main/MainRight";
-import MainMore from "../comp/main/MainMore";
+import CollectionProd from "../comp/collection/CollectionProd";
 import Footer from "../comp/Footer";
 
 const Wrap = styled.div`
-  display: flex;
+  /* display: flex; */
   position: relative;
   overflow: hidden;
   /* max-height: 12000px; */
 `;
 
-const Main = () => {
+const Collection = () => {
   return (
     <div>
       <Header />
       <Wrap>
-        <MainLeft />
-        <MainRight />
-        <MainMore />
+        <CollectionProd></CollectionProd>
       </Wrap>
       <Footer />
     </div>
   );
 };
 
-export default Main;
+export default Collection;

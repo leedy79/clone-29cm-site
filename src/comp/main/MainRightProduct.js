@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import data from "../../db/mainRight";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MainRightWrap = styled.div`
   /* background-color: grey; */
@@ -55,7 +56,7 @@ const MainRightWrap = styled.div`
     flex-direction: column;
     justify-content: space-between;
     gap: 2px;
-        flex: 1 1 0%;
+    flex: 1 1 0%;
   }
   .product-box > img {
     width: 54px;
@@ -79,7 +80,7 @@ const MainRightWrap = styled.div`
   .discount {
     font-size: 12px;
     font-weight: 700;
-    color: #FF4800;
+    color: #ff4800;
     display: inline-block;
   }
   .like-box {
@@ -98,7 +99,7 @@ const MainRightWrap = styled.div`
     font-size: 12px;
     color: #5d5d5da3;
   }
-  
+
   .banner {
     width: 533px;
   }
@@ -106,6 +107,7 @@ const MainRightWrap = styled.div`
 
 const MainRightProduct = () => {
   const [item, setImg] = useState(data);
+  const navigate = useNavigate();
 
   return (
     <MainRightWrap>
@@ -114,37 +116,46 @@ const MainRightProduct = () => {
           return (
             <div key={ele.id} className="product-block">
               {/* 컬렉션 정보 */}
-              <a className="collection" href={ele.collection.url}>
+              <div
+                className="collection"
+                onClick={() => navigate(`/collection/${ele.id}`)}
+              >
                 <img src={ele.collection.image} alt={ele.collection.title} />
                 <div className="collection-info">
                   <h2>{ele.collection.title}</h2>
                   <p>{ele.collection.description}</p>
                 </div>
-              </a>
+              </div>
 
               {/* 제품 리스트 */}
               <ul className="product-list">
-                {ele.products.map((product, idx) => (
-                  <li key={idx} className="product">
-                    <a href={product.url}>
+                {ele.products.map((product, i) => (
+                  <li key={product.id} className="product">
+                    <div onClick={() => navigate(`/product/${product.id}`)}>
                       <div className="product-box">
                         <img src={product.image} alt={product.name} />
                         <div className="product-info">
                           <p className="brand">{product.brand}</p>
-                          <p className="name">{product.name}</p> 
-                          <div className="price-box">                        
+                          <p className="name">{product.name}</p>
+                          <div className="price-box">
                             {product.discount && (
-                              <span className="discount">{product.discount}</span>
+                              <span className="discount">
+                                {product.discount}
+                              </span>
                             )}
                             <span className="price">{product.price}</span>
-                          </div> 
+                          </div>
                         </div>
                         <button className="like-box">
-                          <img className="icon-like" src="img/main_svg/like.svg" alt="like" />
+                          <img
+                            className="icon-like"
+                            src="img/main_svg/like.svg"
+                            alt="like"
+                          />
                           <p className="likes">{product.likes}</p>
                         </button>
                       </div>
-                    </a>
+                    </div>
                   </li>
                 ))}
               </ul>

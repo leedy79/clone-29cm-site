@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const Header = styled.div`
   display: flex;
@@ -34,13 +35,47 @@ const StickyHeader = () => {
   return (
     <Header>
       <Logo>
-        <a href="#"><img src="img/logo.png" alt="logo" /></a>
+        <NavLink to="/">
+          <img src={process.env.PUBLIC_URL + "/img/logo.png"} alt="logo" />
+        </NavLink>
       </Logo>
       <Nav>
-        <li><a href="#"><img src="img/main_svg/mypage.svg" alt="" /><span>MY PAGE</span></a></li>
-        <li><a href="#"><img src="img/main_svg/mylike.svg" alt="" /><span>MY LIKE</span></a></li>
-        <li><a href="#"><img src="img/main_svg/shoppingbag.svg" alt="" /><span>SHOPPING BAG</span></a></li>
-        <li><a href="#"><img src="img/main_svg/login.svg" alt="" /><span>LOGIN</span></a></li>
+        <li>
+          <NavLink to="/">
+            <img
+              src={process.env.PUBLIC_URL + "/img/main_svg/mypage.svg"}
+              alt=""
+            />
+            <span>MY PAGE</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/">
+            <img
+              src={process.env.PUBLIC_URL + "/img/main_svg/mylike.svg"}
+              alt=""
+            />
+            <span>MY LIKE</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/">
+            <img
+              src={process.env.PUBLIC_URL + "/img/main_svg/shoppingbag.svg"}
+              alt=""
+            />
+            <span>SHOPPING BAG</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/">
+            <img
+              src={process.env.PUBLIC_URL + "/img/main_svg/login.svg"}
+              alt=""
+            />
+            <span>LOGIN</span>
+          </NavLink>
+        </li>
       </Nav>
     </Header>
   );

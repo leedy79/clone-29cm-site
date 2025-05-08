@@ -1,18 +1,18 @@
 let data = [
   {
-    id: 1,
+    id: "b1",
     url: "#",
     imgUrl: "img/main_right/banner1.webp",
     alt: "banner1",
   },
   {
-    id: 2,
+    id: "b2",
     url: "#",
     imgUrl: "img/main_right/banner2.webp",
     alt: "banner2",
   },
   {
-    id: 3,
+    id: "c1",
     type: "product",
     collection: {
       title: "산지와 사람을 잇는 커피",
@@ -23,6 +23,7 @@ let data = [
     },
     products: [
       {
+        id: "p11",
         brand: "프릳츠",
         name: "프릳츠 디카페인",
         image: "img/main_right/p3-1.webp",
@@ -32,6 +33,7 @@ let data = [
         likes: "350",
       },
       {
+        id: "p12",
         brand: "프릳츠",
         name: "프릳츠 올드독",
         image: "img/main_right/p3-2.webp",
@@ -43,7 +45,7 @@ let data = [
     ],
   },
   {
-    id: 4,
+    id: "c2",
     type: "product",
     collection: {
       url: "https://content.29cm.co.kr/brand-news/29244",
@@ -54,6 +56,7 @@ let data = [
     },
     products: [
       {
+        id: "p21",
         url: "https://product.29cm.co.kr/catalog/1568728",
         image: "img/main_right/p4-1.webp",
         alt: "콜드브루 윌리엄 블레이크 2종",
@@ -63,6 +66,7 @@ let data = [
         likes: "137",
       },
       {
+        id: "p22",
         url: "https://product.29cm.co.kr/catalog/1568709",
         image: "img/main_right/p4-2.webp",
         alt: "앤트러사이트 원두 버터 팻 트리오",
@@ -74,7 +78,7 @@ let data = [
     ],
   },
   {
-    id: 5,
+    id: "c3",
     type: "product",
     collection: {
       title: "틸버 신상 소식",
@@ -84,6 +88,7 @@ let data = [
     },
     products: [
       {
+        id: "p31",
         brand: "틸버",
         name: "스트라이프 버튼 업 셔츠_Black",
         image: "img/main_right/p5-1.webp",
@@ -93,6 +98,7 @@ let data = [
         likes: "68",
       },
       {
+        id: "p32",
         brand: "틸버",
         name: "스트라이프 버튼 업 셔츠_Beige",
         image: "img/main_right/p5-2.webp",
@@ -104,7 +110,7 @@ let data = [
     ],
   },
   {
-    id: 6,
+    id: "c4",
     type: "product",
     collection: {
       title: "29어퍼스트로피 x 아고 램프",
@@ -115,6 +121,7 @@ let data = [
     },
     products: [
       {
+        id: "p41",
         brand: "이구어퍼스트로피",
         name: "[선물하기 쿠폰] 29XAGO ampm 포터블램프 3color",
         image: "img/main_right/p6-1.webp",
@@ -126,7 +133,7 @@ let data = [
     ],
   },
   {
-    id: 7,
+    id: "c5",
     type: "product",
     collection: {
       title: "완벽함에 더한 실용성",
@@ -136,6 +143,7 @@ let data = [
     },
     products: [
       {
+        id: "p51",
         brand: "하 아카이브",
         name: "[HAH ARCHIVE] ARK BLACK MESSENGER BAG",
         image: "img/main_right/p7-1.webp",
@@ -145,6 +153,7 @@ let data = [
         likes: "13K",
       },
       {
+        id: "p52",
         brand: "하 아카이브",
         name: "2BUCKLE SHOULDER MESSENGER BAG 002 (BLACK/NICKEL)",
         image: "img/main_right/p7-2.webp",
@@ -156,7 +165,7 @@ let data = [
     ],
   },
   {
-    id: 8,
+    id: "c6",
     type: "product",
     collection: {
       title: "후기가 증명하는 향과 맛",
@@ -167,6 +176,7 @@ let data = [
     },
     products: [
       {
+        id: "p61",
         brand: "벙커컴퍼니",
         name: "BUNKER#Drip Bag 커피 드립백 10g x 7EA [기프트]",
         image: "img/main_right/p8-1.webp",
@@ -176,6 +186,7 @@ let data = [
         likes: "140",
       },
       {
+        id: "p62",
         brand: "벙커컴퍼니",
         name: "BUNKER instant coffee 인스턴트 커피 NET WT 60g [기프트]",
         image: "img/main_right/p8-2.webp",
@@ -187,7 +198,7 @@ let data = [
     ],
   },
   {
-    id: 9,
+    id: "c7",
     type: "product",
     collection: {
       title: "레더 재킷 마지막 혜택",
@@ -198,6 +209,7 @@ let data = [
     },
     products: [
       {
+        id: "p71",
         brand: "튜드먼트",
         name: "ITALIAN LAMBSKIN LEATHER JACKET BLACK",
         image: "img/main_right/p9-1.webp",
@@ -209,7 +221,7 @@ let data = [
     ],
   },
   {
-    id: 10,
+    id: "c8",
     type: "product",
     collection: {
       title: "눈여겨보던 브랜드만",
@@ -220,6 +232,7 @@ let data = [
     },
     products: [
       {
+        id: "p81",
         brand: "포에브",
         name: "[3차 재입고] Halter Top Layered Cardigan Set [3 COLOR]",
         image: "img/main_right/p10-1.webp",
@@ -229,6 +242,7 @@ let data = [
         likes: "445",
       },
       {
+        id: "p82",
         brand: "아유",
         name: "SIDE OPEN PLEATS SKIRT, BLACK",
         image: "img/main_right/p10-2.webp",
@@ -240,7 +254,7 @@ let data = [
     ],
   },
   {
-    id: 11,
+    id: "c9",
     type: "product",
     collection: {
       title: "한강에서 만나요",
@@ -250,6 +264,7 @@ let data = [
     },
     products: [
       {
+        id: "p91",
         brand: "피크 페스티벌",
         name: "PEAK FESTIVAL 2025",
         image: "img/main_right/p11-1.webp",
@@ -261,7 +276,7 @@ let data = [
     ],
   },
   {
-    id: 12,
+    id: "c10",
     type: "product",
     collection: {
       title: "시각으로 느끼는 독특함",
@@ -272,6 +287,7 @@ let data = [
     },
     products: [
       {
+        id: "p101",
         brand: "서피스에디션",
         name: "NOIR RIDER JACEKT",
         image: "img/main_right/p12-1.webp",
@@ -281,6 +297,7 @@ let data = [
         likes: "12",
       },
       {
+        id: "p102",
         brand: "서피스에디션",
         name: "HERRINGBONE TRUCKER JACKET BLACK",
         image: "img/main_right/p12-2.webp",
@@ -292,7 +309,7 @@ let data = [
     ],
   },
   {
-    id: 13,
+    id: "c11",
     type: "product",
     collection: {
       title: "일상이 예술이 되는 순간",
@@ -303,6 +320,7 @@ let data = [
     },
     products: [
       {
+        id: "p111",
         brand: "워너 브롱크호스트: 온 세상이 캔버스",
         name: "[3-5월 입장권] 워너 브롱크호스트: 온 세상이 캔버스",
         image: "img/main_right/p13-1.webp",
@@ -314,7 +332,7 @@ let data = [
     ],
   },
   {
-    id: 14,
+    id: "c12",
     type: "product",
     collection: {
       title: "과거와 현재의 스타일 조화",
@@ -325,6 +343,7 @@ let data = [
     },
     products: [
       {
+        id: "p121",
         brand: "오가프",
         name: "VTG Logo 6Panel Cap Yellow",
         image: "img/main_right/p14-1.webp",
@@ -334,6 +353,7 @@ let data = [
         likes: "11",
       },
       {
+        id: "p122",
         brand: "오가프",
         name: "VTG Logo 6Panel Cap Red",
         image: "img/main_right/p14-2.webp",
@@ -345,7 +365,7 @@ let data = [
     ],
   },
   {
-    id: 15,
+    id: "c13",
     type: "product",
     collection: {
       title: "3월의 무브웜",
@@ -356,6 +376,7 @@ let data = [
     },
     products: [
       {
+        id: "p131",
         brand: "무브웜",
         name: "Multi Shield Bolero- 2Colors",
         image: "img/main_right/p15-1.webp",
@@ -365,6 +386,7 @@ let data = [
         likes: "793",
       },
       {
+        id: "p132",
         brand: "무브웜",
         name: "Trail Pants- 2Colors",
         image: "img/main_right/p15-2.webp",
@@ -376,7 +398,7 @@ let data = [
     ],
   },
   {
-    id: 16,
+    id: "c14",
     type: "product",
     collection: {
       title: "일상의 고유한 조각",
@@ -387,6 +409,7 @@ let data = [
     },
     products: [
       {
+        id: "p141",
         brand: "칼리코",
         name: "칼리코 진즈 2.2 (Womens)",
         image: "img/main_right/p16-1.webp",
@@ -396,6 +419,7 @@ let data = [
         likes: "18",
       },
       {
+        id: "p142",
         brand: "칼리코",
         name: "칼리코 진즈 2.2 (Mens)",
         image: "img/main_right/p16-2.webp",
@@ -407,7 +431,7 @@ let data = [
     ],
   },
   {
-    id: 17,
+    id: "c15",
     type: "product",
     collection: {
       title: "봄날의 식탁 위에서",
@@ -418,6 +442,7 @@ let data = [
     },
     products: [
       {
+        id: "p151",
         brand: "르크루제",
         name: "로고 파스타볼 25cm_4 Colors",
         image: "img/main_right/p17-1.webp",
@@ -427,6 +452,7 @@ let data = [
         likes: "3K",
       },
       {
+        id: "p152",
         brand: "르크루제",
         name: "[SET] 프렌치 머그 300ml 2P_5 Colors",
         image: "img/main_right/p17-2.webp",
@@ -438,7 +464,7 @@ let data = [
     ],
   },
   {
-    id: 18,
+    id: "c16",
     type: "product",
     collection: {
       title: "행복한 할인 전시",
@@ -449,6 +475,7 @@ let data = [
     },
     products: [
       {
+        id: "p161",
         brand: "우연히 웨스 앤더슨 2: 모험은 계속된다",
         name: "[연장 기념 할인] 우연히 웨스 앤더슨 2",
         image: "img/main_right/p18-1.webp",
@@ -460,7 +487,7 @@ let data = [
     ],
   },
   {
-    id: 19,
+    id: "c17",
     type: "product",
     collection: {
       title: "경계를 초월한 일상",
@@ -471,6 +498,7 @@ let data = [
     },
     products: [
       {
+        id: "p171",
         brand: "케일",
         name: "BREATHE CAP (Olive Brown)",
         image: "img/main_right/p19-1.webp",
@@ -479,6 +507,7 @@ let data = [
         likes: "58",
       },
       {
+        id: "p172",
         brand: "케일",
         name: "LIGHT EQ PANTS (Denim Blue)",
         image: "img/main_right/p19-2.webp",
@@ -489,7 +518,7 @@ let data = [
     ],
   },
   {
-    id: 20,
+    id: "c18",
     type: "product",
     collection: {
       title: "신선함과 자유로움의 조화",
@@ -500,6 +529,7 @@ let data = [
     },
     products: [
       {
+        id: "p181",
         brand: "유체 프레타 포르테",
         name: "AR TWEED BLOUSON JACKET Black",
         image: "img/main_right/p20-1.webp",
@@ -508,6 +538,7 @@ let data = [
         likes: "9",
       },
       {
+        id: "p182",
         brand: "유체 프레타 포르테",
         name: "AR OBLIQUE ALPACA KNIT Black",
         image: "img/main_right/p20-2.webp",
@@ -518,7 +549,7 @@ let data = [
     ],
   },
   {
-    id: 21,
+    id: "c19",
     type: "product",
     collection: {
       title: "하루종일 시원하게",
@@ -529,6 +560,7 @@ let data = [
     },
     products: [
       {
+        id: "p191",
         brand: "스탠리",
         name: "[스탠리공식유통사] 퀜처 H2.0 플로우스테이트 텀블러 887ml",
         image: "img/main_right/p21-1.webp",
@@ -537,6 +569,7 @@ let data = [
         likes: "36K",
       },
       {
+        id: "p192",
         brand: "스탠리",
         name: "[스탠리공식유통사] 카페 투 고 트래블 머그",
         image: "img/main_right/p21-2.webp",
@@ -547,7 +580,7 @@ let data = [
     ],
   },
   {
-    id: 22,
+    id: "c20",
     type: "product",
     collection: {
       title: "테일러드 브라핏의 완벽함",
@@ -558,6 +591,7 @@ let data = [
     },
     products: [
       {
+        id: "p201",
         brand: "캘빈클라인 언더웨어",
         name: "여성 퍼펙틀리 핏 소프트 와이어 티셔츠 브라 세트(5 Color)",
         image: "img/main_right/p22-1.webp",
@@ -566,6 +600,7 @@ let data = [
         likes: "20",
       },
       {
+        id: "p202",
         brand: "캘빈클라인 언더웨어",
         name: "여성 퍼펙틀리 핏 소프트 와이어 티셔츠 브라_F3837AD001",
         image: "img/main_right/p22-2.webp",
@@ -577,7 +612,7 @@ let data = [
     ],
   },
   {
-    id: 23,
+    id: "c21",
     type: "product",
     collection: {
       title: "독창적인 표현",
@@ -588,6 +623,7 @@ let data = [
     },
     products: [
       {
+        id: "p211",
         brand: "예스아이씨",
         name: "Racing 22 Tee White",
         image: "img/main_right/p23-1.webp",
@@ -597,6 +633,7 @@ let data = [
         likes: "206",
       },
       {
+        id: "p212",
         brand: "예스아이씨",
         name: "Racing 22 Tee Black",
         image: "img/main_right/p23-2.webp",
@@ -608,7 +645,7 @@ let data = [
     ],
   },
   {
-    id: 24,
+    id: "c22",
     type: "product",
     collection: {
       title: "디테일로 완성되는 룩",
@@ -619,6 +656,7 @@ let data = [
     },
     products: [
       {
+        id: "p221",
         brand: "락케이크",
         name: "Curve Line Essential Top - 7 Colors",
         image: "img/main_right/p24-1.webp",
@@ -628,6 +666,7 @@ let data = [
         likes: "223",
       },
       {
+        id: "p222",
         brand: "락케이크",
         name: "Eyelet R Pocket Curved Pants - White",
         image: "img/main_right/p24-2.webp",
@@ -639,7 +678,7 @@ let data = [
     ],
   },
   {
-    id: 25,
+    id: "c23",
     type: "product",
     collection: {
       title: "기억에 남는 선물",
@@ -650,6 +689,7 @@ let data = [
     },
     products: [
       {
+        id: "p231",
         brand: "더 그란",
         name: "[선물포장] 페이스 타월 3P기획 모음전 - 블러쉬 핑크 스트라이프, 블루 포그, 블루 핑크 스퀘어 (에디션_러브컬렉션) 기프트세트 쇼핑백별도구매",
         image: "img/main_right/p25-1.webp",
@@ -659,6 +699,7 @@ let data = [
         likes: "666",
       },
       {
+        id: "p232",
         brand: "더 그란",
         name: "[선물포장] 더 그란 2P 기프트 세트 - [에디션] 페이스 타월 / 블러쉬핑크스트라이프, 블루포그, 블루핑크스퀘어_러브컬렉션 (2 Options) 기프트세트 쇼핑백별도구매",
         image: "img/main_right/p25-2.webp",
@@ -670,7 +711,7 @@ let data = [
     ],
   },
   {
-    id: 26,
+    id: "c24",
     type: "product",
     collection: {
       title: "끝나지 않을 대화",
@@ -680,6 +721,7 @@ let data = [
     },
     products: [
       {
+        id: "p241",
         brand: "피크닉",
         name: "끝나지 않을 대화 CORRESPONDENCES",
         image: "img/main_right/p26-1.webp",
@@ -691,7 +733,7 @@ let data = [
     ],
   },
   {
-    id: 27,
+    id: "c25",
     type: "product",
     collection: {
       title: "4월의 무브웜",
@@ -702,6 +744,7 @@ let data = [
     },
     products: [
       {
+        id: "p251",
         brand: "무브웜",
         name: "Breezy Hoodie- 4Colors",
         image: "img/main_right/p27-1.webp",
@@ -711,6 +754,7 @@ let data = [
         likes: "4K",
       },
       {
+        id: "p252",
         brand: "무브웜",
         name: "Soft Crop Top- 4Colors",
         image: "img/main_right/p27-2.webp",
@@ -722,7 +766,7 @@ let data = [
     ],
   },
   {
-    id: 28,
+    id: "c26",
     type: "product",
     collection: {
       title: "내 거 하기 딱 좋은 타이밍",
@@ -732,6 +776,7 @@ let data = [
     },
     products: [
       {
+        id: "p261",
         brand: "Apple",
         name: "애플워치 10 GPS 42mm 실버 알루미늄, 데님 스포츠 밴드 (S/M) MWWA3KH/A",
         image: "img/main_right/p28-1.webp",
@@ -743,7 +788,7 @@ let data = [
     ],
   },
   {
-    id: 29,
+    id: "c27",
     type: "product",
     collection: {
       title: "오랜 이야기 담긴 빈티지",
@@ -754,6 +799,7 @@ let data = [
     },
     products: [
       {
+        id: "p271",
         brand: "더 긱스",
         name: "Pestilence tour T-shirt - White",
         image: "img/main_right/p29-1.webp",
@@ -763,6 +809,7 @@ let data = [
         likes: "0",
       },
       {
+        id: "p272",
         brand: "더 긱스",
         name: "Pestilence tour T-shirt - Black",
         image: "img/main_right/p29-2.webp",
@@ -774,7 +821,7 @@ let data = [
     ],
   },
   {
-    id: 30,
+    id: "c28",
     type: "product",
     collection: {
       title: "사랑스러운 향기",
@@ -785,6 +832,7 @@ let data = [
     },
     products: [
       {
+        id: "p281",
         brand: "깔루 파퓸스",
         name: "블루 EDS 95ML+곰인형 세트",
         image: "img/main_right/p30-1.webp",
@@ -794,6 +842,7 @@ let data = [
         likes: "28",
       },
       {
+        id: "p282",
         brand: "깔루 파퓸스",
         name: "릴리로즈 EDS 95ML+곰인형 세트",
         image: "img/main_right/p30-2.webp",
@@ -805,17 +854,18 @@ let data = [
     ],
   },
   {
-    id: 31,
+    id: "c29",
     type: "product",
     collection: {
       title: "트렌디 빈티지의 묘미",
       description:
         "서지웨어는 최고의 품질을 지향하며 빈티지 스포츠 웨어를 기반으로 만들어지는 브랜드 입니다. 빈티지와 같은 만듦새에 트렌디한 실루엣을 가미하여 합리적인 가격대에 누구나 입을 수 있는 라인업을 선 보이고 있습니다.",
-      image: "img/main_right/p31-1.webp",
+      image: "img/main_right/p31.webp",
       url: "https://content.29cm.co.kr/brand-news/39607",
     },
     products: [
       {
+        id: "p291",
         brand: "서지웨어",
         name: "Standard Sweat shirt - Black",
         image: "img/main_right/p31-1.webp",
@@ -825,6 +875,7 @@ let data = [
         likes: "12",
       },
       {
+        id: "p292",
         brand: "서지웨어",
         name: "Standard Sweat shirt - Navy",
         image: "img/main_right/p31-2.webp",
@@ -836,7 +887,7 @@ let data = [
     ],
   },
   {
-    id: 32,
+    id: "c30",
     type: "product",
     collection: {
       title: "과거와 현재의 조화",
@@ -847,6 +898,7 @@ let data = [
     },
     products: [
       {
+        id: "p301",
         brand: "셔터",
         name: "EDITOR SHIRT (PIN BLUE)",
         image: "img/main_right/p32-1.webp",
@@ -856,6 +908,7 @@ let data = [
         likes: "11",
       },
       {
+        id: "p302",
         brand: "셔터",
         name: "EDITOR SHIRT (PIN WHITE)",
         image: "img/main_right/p32-2.webp",
@@ -867,7 +920,7 @@ let data = [
     ],
   },
   {
-    id: 33,
+    id: "c31",
     type: "product",
     collection: {
       title: "별밤이 추천하는 썸머 데일리 아이템",
@@ -878,6 +931,7 @@ let data = [
     },
     products: [
       {
+        id: "p311",
         brand: "플랙",
         name: "U넥 버튼 슬리브리스 탑_3colors",
         image: "img/main_right/p33-1.webp",
@@ -887,6 +941,7 @@ let data = [
         likes: "99",
       },
       {
+        id: "p312",
         brand: "플랙",
         name: "리틀 플라워 셔링 블라우스_3colors",
         image: "img/main_right/p33-2.webp",
@@ -898,7 +953,7 @@ let data = [
     ],
   },
   {
-    id: 34,
+    id: "c32",
     type: "product",
     collection: {
       title: "책상 위 특별한 동반자",
@@ -908,6 +963,7 @@ let data = [
     },
     products: [
       {
+        id: "p321",
         brand: "레토",
         name: "레토 무선 탁상용 선풍기 자동 회전 미니 소형 캠핑 책상 사무실 10단풍량",
         image: "img/main_right/p34-1.webp",
@@ -917,6 +973,7 @@ let data = [
         likes: "60",
       },
       {
+        id: "p322",
         brand: "레토",
         name: "휴대용 무선 선풍기 높이조절 무드등 겸용 LMF-PS01",
         image: "img/main_right/p34-2.webp",
@@ -928,7 +985,7 @@ let data = [
     ],
   },
   {
-    id: 35,
+    id: "c33",
     type: "product",
     collection: {
       title: "마음을 전해드려요",
@@ -939,6 +996,7 @@ let data = [
     },
     products: [
       {
+        id: "p331",
         brand: "웜그레이테일",
         name: "[29CM 단독] 수(사자)세미 2P 세트",
         image: "img/main_right/p35-1.webp",
@@ -948,6 +1006,7 @@ let data = [
         likes: "2K",
       },
       {
+        id: "p332",
         brand: "웜그레이테일",
         name: "플러피 독 법랑 플레이트 - 웜그레이",
         image: "img/main_right/p35-2.webp",
@@ -959,7 +1018,7 @@ let data = [
     ],
   },
   {
-    id: 36,
+    id: "c34",
     type: "product",
     collection: {
       title: "비가 반가워지는 순간",
@@ -969,6 +1028,7 @@ let data = [
     },
     products: [
       {
+        id: "p341",
         brand: "지비에이치",
         name: "3-FOLDING UMBRELLA 자동3단우산 자외선차단우양산",
         image: "img/main_right/p36-1.webp",
@@ -978,6 +1038,7 @@ let data = [
         likes: "23K",
       },
       {
+        id: "p342",
         brand: "포유렐라",
         name: "포유렐라 벚꽃 튼튼한 투명 돔형 장우산 자동 우산",
         image: "img/main_right/p36-2.webp",

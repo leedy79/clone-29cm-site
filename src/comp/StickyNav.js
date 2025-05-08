@@ -57,32 +57,71 @@ const StickyNav = () => {
     <NavWrap>
       <NavBig>
         <ul>
-          <li><a href="#">Special-Order</a></li>
-          <li><a href="#">Showcase</a></li>
-          <li><a href="#">PT</a></li>
-          <li><a href="#">29Magazine</a></li>
+          <li>
+            <a href="#">Special-Order</a>
+          </li>
+          <li>
+            <a href="#">Showcase</a>
+          </li>
+          <li>
+            <a href="#">PT</a>
+          </li>
+          <li>
+            <a href="#">29Magazine</a>
+          </li>
         </ul>
         <button>
-          <img src="img/main_svg/search.svg" alt="" />
+          <img
+            src={process.env.PUBLIC_URL + "/img/main_svg/search.svg"}
+            alt=""
+          />
         </button>
       </NavBig>
       <NavSmall>
         <ul>
-          <NavItem><a href="#">BEST</a></NavItem>
-          <NavItem><a href="#">WOMEN</a></NavItem>
-          <NavItem><a href="#">MEN</a></NavItem>
-          <NavItem><a href="#">INTERIOR</a></NavItem>
-          <NavItem><a href="#">KITCHEN</a></NavItem>
-          <NavItem><a href="#">ELECTRONICS</a></NavItem>
-          <NavItem><a href="#">DIGITAL</a></NavItem>
-          <NavItem><a href="#">BEAUTY</a></NavItem>
-          <NavItem><a href="#">FOOD</a></NavItem>
-          <NavItem><a href="#">LEISURE</a></NavItem>
-          <NavItem><a href="#">KIDS</a></NavItem>
-          <NavItem><a href="#">CULTURE</a></NavItem>
+          <NavItem>
+            <a href="#">BEST</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">WOMEN</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">MEN</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">INTERIOR</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">KITCHEN</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">ELECTRONICS</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">DIGITAL</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">BEAUTY</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">FOOD</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">LEISURE</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">KIDS</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">CULTURE</a>
+          </NavItem>
           <div></div>
-          <li className="italic"><a href="#">Event</a></li>
-          <li className="italic"><a href="#">Lookbook</a></li>
+          <li className="italic">
+            <a href="#">Event</a>
+          </li>
+          <li className="italic">
+            <a href="#">Lookbook</a>
+          </li>
         </ul>
       </NavSmall>
     </NavWrap>

@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../comp/Sticky";
-import MainLeft from "../comp/main/MainLeft";
-import MainRight from "../comp/main/MainRight";
-import MainMore from "../comp/main/MainMore";
+import Product from "../comp/product/ProductDetail";
 import Footer from "../comp/Footer";
 
 const Wrap = styled.div`
@@ -18,9 +16,7 @@ const Main = () => {
     <div>
       <Header />
       <Wrap>
-        <MainLeft />
-        <MainRight />
-        <MainMore />
+        <Product></Product>
       </Wrap>
       <Footer />
     </div>
