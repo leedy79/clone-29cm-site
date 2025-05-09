@@ -217,7 +217,11 @@ const CollectionProd = () => {
         <div className="product-list">
           {item.map((product, i) => (
             <li key={product.id}>
-              <div onClick={() => navigate(`/product/${product.id}`)}>
+              <div
+                onClick={() =>
+                  navigate(`/product/${product.id}`, { state: product })
+                }
+              >
                 <div className="product-box">
                   <img
                     src={process.env.PUBLIC_URL + "/" + product.image}
