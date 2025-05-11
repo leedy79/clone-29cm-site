@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+
+
 
 const NavWrap = styled.nav`
   display: flex;
@@ -53,6 +56,7 @@ const NavItem = styled.li`
 `;
 
 const StickyNav = () => {
+  const navigate = useNavigate();
   return (
     <NavWrap>
       <NavBig>
@@ -121,6 +125,10 @@ const StickyNav = () => {
           </li>
           <li className="italic">
             <a href="#">Lookbook</a>
+          </li>
+          <li className="italic">
+            <p onClick={() => navigate('/board')}>++ Board ++</p>
+            {/* <a href="#">Board</a> */}
           </li>
         </ul>
       </NavSmall>

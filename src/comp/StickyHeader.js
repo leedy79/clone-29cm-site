@@ -59,7 +59,7 @@ const StickyHeader = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/">
+          <NavLink to="/cart">
             <img
               src={process.env.PUBLIC_URL + "/img/main_svg/shoppingbag.svg"}
               alt=""

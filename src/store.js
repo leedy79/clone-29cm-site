@@ -23,9 +23,9 @@ export let { changeName, increase } = user.actions;
 let cart = createSlice({
   name: "cart",
   initialState: [
-    { id: 1, imgurl: "fruit1.jpg", name: "수박", count: 2 },
-    { id: 2, imgurl: "fruit2.jpg", name: "참외", count: 1 },
-    { id: 3, imgurl: "fruit3.jpg", name: "사과", count: 1 },
+    { id: "1", image: "img/collection_product/1.webp", name: "[BEST]_Hasta pants_7 Colors", count: 2 },
+    { id: "2", image: "img/collection_product/2.webp", name: "브라패드", count: 1 },
+    { id: "3", image: "img/collection_product/3.webp", name: "[29CM 단독]_OZPN2030 스모킹 팬츠 - 27 colors", count: 1 },
   ],
   reducers: {
     // 상품 수량 1개 늘리기

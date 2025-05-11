@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import data from "../../db/collectionProd";
-import { useState } from "react";
+import { useState, useEffect  } from "react";
+import { addItem } from '../../store.js'
+import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { useLocation, useParams } from "react-router-dom";
 
@@ -76,9 +79,9 @@ const ProductPurchaseWrap = styled.div`
     margin-top: 6px;
   }
   .brand-home-btn {
-    /* min-width: 40px;
+    min-width: 40px;
     min-height: 25px;
-    display: inline; */
+    display: inline;
     padding: 0 9px;
     font-size: 11px;
     border: 1px solid #d4d4d4;
@@ -661,10 +664,26 @@ const ProductDetail = () => {
   const { pId } = useParams();
   const location = useLocation();
   const product = location.state;
-  // 새로고침 시 location.state는 undefined → 대처 필요
+  const dispatch = useDispatch();
+
   if (!product) {
     return <div>상품 정보를 불러올 수 없습니다.</div>;
   }
+
+  const { id, brand, image, name, discount, price, likes} = product;
+
+  const rawPrice = price
+    ? parseInt(price.replace(/,/g, ""), 10)
+    : 0;
+
+  const discountRate = discount
+    ? parseFloat(discount.replace("%", "")) / 100
+    : 0;
+  const originalPrice = Math.round(rawPrice / (1 - discountRate));
+  const formattedPrice = originalPrice.toLocaleString("ko-KR");
+
+
+  
 
   return (
     <>
@@ -695,16 +714,16 @@ const ProductDetail = () => {
       </CategoryWrap>
       <ProductPurchaseWrap>
         <div className="brand-box">
-          <a className="brand-link" href="#">
+          <a className="brand-link" href="">
             <img
-              src={process.env.PUBLIC_URL + "/img/detail/brand_img.webp"}
+              // src={process.env.PUBLIC_URL + "/img/detail/brand_img.webp"}
+              src={process.env.PUBLIC_URL + "/" + image}
               alt=""
             />
             <div className="brand-info-box">
-              <h3 className="brand">{product.brand}</h3>
+              <h3 className="brand">{brand}</h3>
               <p className="desc">
-                프라크티는 요가와 삶을 연결시키며 다채로운 컬러를 사랑하는
-                브랜드입니다.
+                {brand}는 당신의 삶을 풍요롭게 합니다.
               </p>
               <div className="brand-home">
                 <button className="brand-home-btn">BRAND HOME</button>
@@ -718,10 +737,17 @@ const ProductDetail = () => {
               <ul className="img-slider-box">
                 <li className="img-slider-item">
                   <div className="slider-img-box">
-                    <img
+                    {/* <img
                       src={
                         process.env.PUBLIC_URL +
                         "/img/collection_product/1.webp"
+                      }
+                      alt=""
+                    /> */}
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "/" + image
                       }
                       alt=""
                     />
@@ -824,7 +850,7 @@ const ProductDetail = () => {
           </div>
           <div className="purchase-box">
             <div className="purchase-box-inner-1">
-              <h2>[BEST]_Hasta pants_7 Colors</h2>
+              <h2>{name}</h2>
               <div>
                 <button className="btn-like">
                   <img
@@ -859,17 +885,17 @@ const ProductDetail = () => {
                   />
                 </div>
               </div>
-              <button>318개 리뷰 보기</button>
+              <button>{likes}개 리뷰 보기</button>
             </div>
             <div className="purchase-box-inner-2">
               <div className="price-box">
-                <span className="prev-price">67000원</span>
-                <span className="elem-text">첫 구매가</span>
+                {discount && <span className="prev-price">{formattedPrice}원</span>}
+                {discount && <span className="elem-text">첫 구매가</span>}
                 <div className="price-info-box">
                   <div className="price-info-inner">
-                    <span className="sale">30%</span>
+                    {discount && <span className="sale">{discount}</span>}
                     <span className="price">
-                      46900<span>원</span>
+                      {price}<span>원</span>
                     </span>
                   </div>
                 </div>
@@ -893,9 +919,9 @@ const ProductDetail = () => {
               <button className="price-box-2">
                 <div className="price-info-box">
                   <div className="price-info-inner">
-                    <span className="sale">30%</span>
+                    <span className="sale">{discount}</span>
                     <span className="price">
-                      46900<span>원</span>
+                      {price}<span>원</span>
                     </span>
                   </div>
                 </div>
@@ -934,14 +960,14 @@ const ProductDetail = () => {
                         width="16"
                         height="16"
                         fill="none"
-                        class="css-1udwh3t e6mvafa6"
+                        className="css-1udwh3t e6mvafa6"
                         viewBox="0 0 20 20"
                       >
                         <path
                           fill="#c4c4c4"
-                          fill-rule="evenodd"
+                          fillRule="evenodd"
                           d="M18.333 10a8.333 8.333 0 1 1-16.666 0 8.333 8.333 0 0 1 16.666 0M10 17.5a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15"
-                          clip-rule="evenodd"
+                          clipRule="evenodd"
                         />
                         <path
                           fill="#c4c4c4"
@@ -999,7 +1025,17 @@ const ProductDetail = () => {
                 </div>
               </div>
               <div className="cart-purchase-box">
-                <button className="cart_btn">장바구니 담기</button>
+                <button className="cart_btn" onClick={() => {
+              dispatch(
+                addItem({
+                  id: id,
+                  image: image,
+                  name: name,
+                  count: 1,
+                })
+              );
+            }}
+            style={{ marginRight: "10px" }}>장바구니 담기</button>
                 <button className="purchase_btn">바로 구매하기</button>
               </div>
             </div>
@@ -1059,7 +1095,7 @@ const ProductDetail = () => {
         </section>
         <div className="detail-img-box">
           <img
-            src={process.env.PUBLIC_URL + "/img/detail/detail_img.jpg"}
+            src={process.env.PUBLIC_URL + "/img/detail/detail_" + id +".jpg"}
             alt=""
           />
         </div>

@@ -131,7 +131,7 @@ const MainRightProduct = () => {
               <ul className="product-list">
                 {ele.products.map((product, i) => (
                   <li key={product.id} className="product">
-                    <div onClick={() => navigate(`/product/${product.id}`)}>
+                    <div onClick={() => navigate(`/product/${product.id}`, { state: product })}>
                       <div className="product-box">
                         <img src={product.image} alt={product.name} />
                         <div className="product-info">

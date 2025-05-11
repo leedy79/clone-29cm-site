@@ -1,6 +1,6 @@
 let data = [
   {
-    id: "3005272",
+    id: "1",
     name: "[BEST]_Hasta pants_7 Colors",
     brand: "프라크티",
     url: "https://product.29cm.co.kr/catalog/3005272?product_sort=best&id=12148&source=collection",
@@ -15,7 +15,7 @@ let data = [
     },
   },
   {
-    id: "1636482",
+    id: "2",
     name: "브라패드",
     brand: "오즈이즈",
     url: "https://product.29cm.co.kr/catalog/1636482?product_sort=best&id=12148&source=collection",
@@ -30,7 +30,7 @@ let data = [
     },
   },
   {
-    id: "1447964",
+    id: "3",
     name: "[29CM 단독]_OZPN2030 스모킹 팬츠 - 27 colors",
     brand: "오즈이즈",
     url: "https://product.29cm.co.kr/catalog/1447964?product_sort=best&id=12148&source=collection",
@@ -45,7 +45,7 @@ let data = [
     },
   },
   {
-    id: "347673",
+    id: "4",
     name: "여성 요가복 DEVI-B0013-블랙 필라테스 군살제로 바이커 5부",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/347673?product_sort=best&id=12148&source=collection",
@@ -60,7 +60,7 @@ let data = [
     },
   },
   {
-    id: "1589780",
+    id: "5",
     name: "여성 요가복 DEVI-TS0011-화이트 필라테스 도로시 크롭탑",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/1589780?product_sort=best&id=12148&source=collection",
@@ -75,7 +75,7 @@ let data = [
     },
   },
   {
-    id: "1589722",
+    id: "6",
     name: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/1589722?product_sort=best&id=12148&source=collection",
     image: "img/collection_product/6.webp",
@@ -89,7 +89,7 @@ let data = [
     },
   },
   {
-    id: "3087069",
+    id: "7",
     name: "[25SS]_Nirlamba pants_3 Colors",
     brand: "프라크티",
     url: "https://product.29cm.co.kr/catalog/3087069?product_sort=best&id=12148&source=collection",
@@ -104,7 +104,7 @@ let data = [
     },
   },
   {
-    id: "3063206",
+    id: "8",
     name: "파인 스트링 윈드자켓 DEVI-O0019-화이트",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/3063206?product_sort=best&id=12148&source=collection",
@@ -119,7 +119,7 @@ let data = [
     },
   },
   {
-    id: "1291701",
+    id: "9",
     name: "모어아웃 여성운동복 요가복 원마일웨어 애슬레져룩 바스락팬츠 에어 썸머 조거 밴딩 팬츠 5PP911",
     brand: "모어아웃",
     url: "https://product.29cm.co.kr/catalog/1291701?product_sort=best&id=12148&source=collection",
@@ -134,7 +134,7 @@ let data = [
     },
   },
   {
-    id: "2028023",
+    id: "10",
     name: "[29CM 단독]_모어아웃 여성요가복 핀턱 쭈리 벌룬 팬츠 5PP3533",
     brand: "모어아웃",
     url: "https://product.29cm.co.kr/catalog/2028023?product_sort=best&id=12148&source=collection",
@@ -149,7 +149,7 @@ let data = [
     },
   },
   {
-    id: "1105498",
+    id: "11",
     name: "여성 요가복 DEVI-TS0024-에쉬그레이 필라테스 엣지크롭 슬리브리스 나시",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/1105498?product_sort=best&id=12148&source=collection",
@@ -164,7 +164,7 @@ let data = [
     },
   },
   {
-    id: "3152167",
+    id: "12",
     name: "모어아웃 여성요가복 코튼 크롭 숏 슬리브 티셔츠 4TT5454",
     brand: "모어아웃",
     url: "https://product.29cm.co.kr/catalog/3152167?product_sort=best&id=12148&source=collection",
@@ -179,7 +179,7 @@ let data = [
     },
   },
   {
-    id: "3113652",
+    id: "13",
     name: "여성 요가복 DEVI-TS0033-브라운 필라테스 리비아 브라탑",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/3113652?product_sort=best&id=12148&source=collection",
@@ -194,7 +194,7 @@ let data = [
     },
   },
   {
-    id: "3078492",
+    id: "14",
     name: "[25SS]_Yoga family T-shirt_2 Colors",
     brand: "프라크티",
     url: "https://product.29cm.co.kr/catalog/3078492?product_sort=best&id=12148&source=collection",
@@ -209,7 +209,7 @@ let data = [
     },
   },
   {
-    id: "3014005",
+    id: "15",
     name: "[BEST]_Raja bra top_6 Colors",
     brand: "프라크티",
     url: "https://product.29cm.co.kr/catalog/3014005?product_sort=best&id=12148&source=collection",
@@ -224,7 +224,7 @@ let data = [
     },
   },
   {
-    id: "2891905",
+    id: "16",
     name: "Mukha cover top [ grape purple ]",
     brand: "프라크티",
     url: "https://product.29cm.co.kr/catalog/2891905?product_sort=best&id=12148&source=collection",
@@ -239,7 +239,7 @@ let data = [
     },
   },
   {
-    id: "2822579",
+    id: "17",
     name: "OZTB5036 코튼 모달 핀턱 브라탑 - 인디 핑크",
     brand: "오즈이즈",
     url: "https://product.29cm.co.kr/catalog/2822579?product_sort=best&id=12148&source=collection",
@@ -254,7 +254,7 @@ let data = [
     },
   },
   {
-    id: "2815580",
+    id: "18",
     name: "웨이븐 프릴 롱슬리브 DEVI-T0112-펌킨",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/2815580?product_sort=best&id=12148&source=collection",
@@ -269,7 +269,7 @@ let data = [
     },
   },
   {
-    id: "2365021",
+    id: "19",
     name: "여성 요가복 DEVI-B0073-블랙 필라테스 군살제로 와이드 부츠컷 레깅스",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/2365021?product_sort=best&id=12148&source=collection",
@@ -284,7 +284,7 @@ let data = [
     },
   },
   {
-    id: "2073553",
+    id: "20",
     name: "[29CM 단독]_모어아웃 여성요가복 바스락 튤립 쇼츠 5PP3532",
     brand: "모어아웃",
     url: "https://product.29cm.co.kr/catalog/2073553?product_sort=best&id=12148&source=collection",
@@ -299,7 +299,7 @@ let data = [
     },
   },
   {
-    id: "3234166",
+    id: "21",
     name: "비비아나 셔링 쇼츠 DEVI-B0088-차콜",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/3234166?product_sort=best&id=12148&source=collection",
@@ -314,7 +314,7 @@ let data = [
     },
   },
   {
-    id: "3226893",
+    id: "22",
     name: "줄리 셔링 캡 슬리브 DEVI-T0130-멜란지그레이",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/3226893?product_sort=best&id=12148&source=collection",
@@ -329,7 +329,7 @@ let data = [
     },
   },
   {
-    id: "3113648",
+    id: "23",
     name: "익스틴 서포트 티 DEVI-T0045-베이지",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/3113648?product_sort=best&id=12148&source=collection",
@@ -344,7 +344,7 @@ let data = [
     },
   },
   {
-    id: "2985758",
+    id: "24",
     name: "타탄 플레어 힙커버 DEVI-B0081-옐로우",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/2985758?product_sort=best&id=12148&source=collection",
@@ -359,7 +359,7 @@ let data = [
     },
   },
   {
-    id: "2815577",
+    id: "25",
     name: "웨이븐 프릴 롱슬리브 DEVI-T0112-블랙",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/2815577?product_sort=best&id=12148&source=collection",
@@ -374,7 +374,7 @@ let data = [
     },
   },
   {
-    id: "2636315",
+    id: "26",
     name: "OZPN2112 백 슬릿 플레어 요가팬츠 - 파스텔 그린",
     brand: "오즈이즈",
     url: "https://product.29cm.co.kr/catalog/2636315?product_sort=best&id=12148&source=collection",
@@ -389,7 +389,7 @@ let data = [
     },
   },
   {
-    id: "2549580",
+    id: "27",
     name: "OZTJ3027 코튼 요루 피그먼트 한텐 - 차콜",
     brand: "오즈이즈",
     url: "https://product.29cm.co.kr/catalog/2549580?product_sort=best&id=12148&source=collection",
@@ -404,7 +404,7 @@ let data = [
     },
   },
   {
-    id: "2024911",
+    id: "28",
     name: "[29CM 단독]_[1&1] OZPG6005 에센셜 조거팬츠",
     brand: "오즈이즈",
     url: "https://product.29cm.co.kr/catalog/2024911?product_sort=best&id=12148&source=collection",
@@ -419,7 +419,7 @@ let data = [
     },
   },
   {
-    id: "1289721",
+    id: "29",
     name: "모어아웃 여성운동복 요가복 애슬레져룩 바스락팬츠 에어 썸머 하프팬츠 5PP603",
     brand: "모어아웃",
     url: "https://product.29cm.co.kr/catalog/1289721?product_sort=best&id=12148&source=collection",
@@ -434,7 +434,7 @@ let data = [
     },
   },
   {
-    id: "1159099",
+    id: "30",
     name: "페이스 슬림 반팔티 DEVI-T0061-블랙",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/1159099?product_sort=best&id=12148&source=collection",
@@ -449,7 +449,7 @@ let data = [
     },
   },
   {
-    id: "1126643",
+    id: "31",
     name: "여성 요가복 DEVI-B0046-블랙 필라테스 군살제로 바이커 4부",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/1126643?product_sort=best&id=12148&source=collection",
@@ -464,7 +464,7 @@ let data = [
     },
   },
   {
-    id: "1105502",
+    id: "32",
     name: "여성 요가복 DEVI-TS0024-화이트 필라테스 엣지크롭 슬리브리스",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/1105502?product_sort=best&id=12148&source=collection",
@@ -479,7 +479,7 @@ let data = [
     },
   },
   {
-    id: "1065306",
+    id: "33",
     name: "익스틴 서포트 티 DEVI-T0045-블랙",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/1065306?product_sort=best&id=12148&source=collection",
@@ -494,7 +494,7 @@ let data = [
     },
   },
   {
-    id: "1007461",
+    id: "34",
     name: "뉴웨이브 홀릭크롭 DEVI-T0018-블랙",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/1007461?product_sort=best&id=12148&source=collection",
@@ -509,7 +509,7 @@ let data = [
     },
   },
   {
-    id: "3234173",
+    id: "35",
     name: "비비아나 셔링 쇼츠 DEVI-B0088-네이비",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/3234173?product_sort=best&id=12148&source=collection",
@@ -524,7 +524,7 @@ let data = [
     },
   },
   {
-    id: "3211270",
+    id: "36",
     name: "메이 스퀘어넥 슬리브리스 DEVI-TS0051-블랙",
     brand: "데비웨어",
     url: "https://product.29cm.co.kr/catalog/3211270?product_sort=best&id=12148&source=collection",
