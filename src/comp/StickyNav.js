@@ -127,7 +127,7 @@ const StickyNav = () => {
             <a href="#">Lookbook</a>
           </li>
           <li className="italic">
-            <p onClick={() => navigate('/board')}>++ Board ++</p>
+            <p onClick={() => navigate('/board')}>++ Board(게시판) ++</p>
             {/* <a href="#">Board</a> */}
           </li>
         </ul>
