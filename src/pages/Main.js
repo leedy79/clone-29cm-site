@@ -10,7 +10,7 @@ const Wrap = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  /* max-height: 12000px; */
+  width: 100%;
 `;
 
 const Main = () => {
