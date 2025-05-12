@@ -131,7 +131,11 @@ const MainRightProduct = () => {
               <ul className="product-list">
                 {ele.products.map((product, i) => (
                   <li key={product.id} className="product">
-                    <div onClick={() => navigate(`/product/${product.id}`, { state: product })}>
+                    <div
+                      onClick={() =>
+                        navigate(`/product/${product.id}`, { state: product })
+                      }
+                    >
                       <div className="product-box">
                         <img src={product.image} alt={product.name} />
                         <div className="product-info">
@@ -166,9 +170,12 @@ const MainRightProduct = () => {
         // 기본 배너 (type이 없거나 다른 경우)
         return (
           <div key={ele.id} className="banner">
-            <a href={ele.url}>
+            <div
+              className="collection"
+              onClick={() => navigate(`/collection/${ele.id}`)}
+            >
               <img src={ele.imgUrl} alt={ele.alt} />
-            </a>
+            </div>
           </div>
         );
       })}

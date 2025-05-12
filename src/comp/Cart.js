@@ -1,4 +1,3 @@
-// import "bootstrap/dist/css/bootstrap.min.css";
 import { Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 // import store, {changeName, increase} from './store.js'
@@ -7,9 +6,11 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Cart() {
-
   // Redux에서 전체 state를 구조분해할당으로 가져옴
-  const { user: { name, age }, cart} = useSelector((state) => state);
+  const {
+    user: { name, age },
+    cart,
+  } = useSelector((state) => state);
 
   // dispatch는  store.js 로 요청보내주는 함수
   let dispatch = useDispatch();
@@ -36,7 +37,6 @@ function Cart() {
               {/* {name} {age}의 장바구니/ */}
               {name}의 장바구니
             </h5>
-      
             <Table>
               <thead>
                 <tr>
@@ -54,7 +54,7 @@ function Cart() {
                     <td style={textverticalAlign}>{id}</td>
                     {/* 이미지 클릭 시 해당 상품 상세 페이지로 이동 */}
                     <td>
-                      <Link to={`/detail/${id}`}>
+                      <Link to={`/product/${id}`}>
                         <img
                           src={process.env.PUBLIC_URL + "/" + image}
                           style={smallProdcuctStyle}
@@ -98,13 +98,11 @@ function Cart() {
                       >
                         상품삭제
                       </Button>
-
                     </td>
                   </tr>
                 ))}
               </tbody>
             </Table>
-
             {/* 이름순으로 정렬하는 버튼 */}
             <Button
               variant="outline-primary"

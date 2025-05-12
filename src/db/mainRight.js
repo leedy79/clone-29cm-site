@@ -1,13 +1,13 @@
 let data = [
   {
     id: "b1",
-    url: "#",
+    url: "/collection",
     imgUrl: "img/main_right/banner1.webp",
     alt: "banner1",
   },
   {
     id: "b2",
-    url: "#",
+    url: "/collection",
     imgUrl: "img/main_right/banner2.webp",
     alt: "banner2",
   },

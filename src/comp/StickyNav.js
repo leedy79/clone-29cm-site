@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-
-
+import { NavLink } from "react-router-dom";
 
 const NavWrap = styled.nav`
   display: flex;
@@ -62,16 +61,16 @@ const StickyNav = () => {
       <NavBig>
         <ul>
           <li>
-            <a href="#">Special-Order</a>
+            <NavLink to="/collection">Special-Order</NavLink>
           </li>
           <li>
-            <a href="#">Showcase</a>
+            <NavLink to="/collection">Showcase</NavLink>
           </li>
           <li>
-            <a href="#">PT</a>
+            <NavLink to="/collection">PT</NavLink>
           </li>
           <li>
-            <a href="#">29Magazine</a>
+            <NavLink to="/collection">29Magazine</NavLink>
           </li>
         </ul>
         <button>
@@ -84,50 +83,50 @@ const StickyNav = () => {
       <NavSmall>
         <ul>
           <NavItem>
-            <a href="#">BEST</a>
+            <NavLink to="/collection">BEST</NavLink>
           </NavItem>
           <NavItem>
-            <a href="#">WOMEN</a>
+            <NavLink to="/collection">WOMEN</NavLink>
           </NavItem>
           <NavItem>
-            <a href="#">MEN</a>
+            <NavLink to="/collection">MEN</NavLink>
           </NavItem>
           <NavItem>
-            <a href="#">INTERIOR</a>
+            <NavLink to="/collection">INTERIOR</NavLink>
           </NavItem>
           <NavItem>
-            <a href="#">KITCHEN</a>
+            <NavLink to="/collection">KITCHEN</NavLink>
           </NavItem>
           <NavItem>
-            <a href="#">ELECTRONICS</a>
+            <NavLink to="/collection">ELECTRONICS</NavLink>
           </NavItem>
           <NavItem>
-            <a href="#">DIGITAL</a>
+            <NavLink to="/collection">DIGITAL</NavLink>
           </NavItem>
           <NavItem>
-            <a href="#">BEAUTY</a>
+            <NavLink to="/collection">BEAUTY</NavLink>
           </NavItem>
           <NavItem>
-            <a href="#">FOOD</a>
+            <NavLink to="/collection">FOOD</NavLink>
           </NavItem>
           <NavItem>
-            <a href="#">LEISURE</a>
+            <NavLink to="/collection">LEISURE</NavLink>
           </NavItem>
           <NavItem>
-            <a href="#">KIDS</a>
+            <NavLink to="/collection">KIDS</NavLink>
           </NavItem>
           <NavItem>
-            <a href="#">CULTURE</a>
+            <NavLink to="/collection">CULTURE</NavLink>
           </NavItem>
           <div></div>
           <li className="italic">
-            <a href="#">Event</a>
+            <NavLink to="/collection">Event</NavLink>
           </li>
           <li className="italic">
-            <a href="#">Lookbook</a>
+            <NavLink to="/collection">Lookbook</NavLink>
           </li>
           <li className="italic">
-            <p onClick={() => navigate('/board')}>++ Board(게시판) ++</p>
+            <p onClick={() => navigate("/board")}>++ Board(게시판) ++</p>
             {/* <a href="#">Board</a> */}
           </li>
         </ul>

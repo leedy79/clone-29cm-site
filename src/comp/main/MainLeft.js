@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import data from "../../db/mainLeft";
-import { useState } from "react";
+// import data from "../../db/mainLeft";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MainLeftWrap = styled.div`
   /* position: relative; */
@@ -13,16 +14,27 @@ const MainLeftWrap = styled.div`
 `;
 
 const MainLeft = () => {
-  let [img, setImg] = useState(data);
+  let [data, setData] = useState([]);
+  const navigate = useNavigate();
+  useEffect(() => {
+    fetch(`${process.env.PUBLIC_URL}/db/mainLeft.json`)
+      .then((res) => res.json())
+      .then((json) => setData(json))
+      .catch((err) => console.error("데이터 로딩 오류", err));
+  }, []);
+
   return (
     <MainLeftWrap>
       <ul>
-        {img.map((ele, i) => {
+        {data.map((ele, i) => {
           return (
             <li key={ele.id}>
-              <a href={ele.url}>
+              <div
+                className="collection"
+                onClick={() => navigate(`/collection/${ele.id}`)}
+              >
                 <img src={ele.imgUrl} />
-              </a>
+              </div>
             </li>
           );
         })}

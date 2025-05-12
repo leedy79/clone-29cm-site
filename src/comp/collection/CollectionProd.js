@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import data from "../../db/collectionProd";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const CollectionWrap = styled.div`
@@ -182,6 +182,45 @@ const CollectionProd = () => {
   const [item, setImg] = useState(data);
   const navigate = useNavigate();
 
+  // 세일 시작과 종료 시간
+  const now = new Date();
+  const saleStart = now;
+  const saleEnd = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7일 후
+  const totalDuration = saleEnd - saleStart;
+
+  const [remainingTime, setRemainingTime] = useState(saleEnd - new Date());
+  const [progressPercent, setProgressPercent] = useState(100);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const now = new Date();
+      const timeLeft = saleEnd - now - 48600000;
+
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        setRemainingTime(0);
+        setProgressPercent(0);
+      } else {
+        setRemainingTime(timeLeft);
+        setProgressPercent(((saleEnd - now - 48600000) / totalDuration) * 100);
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (ms) => {
+    const totalSec = Math.floor(ms / 1000);
+    const days = Math.floor(totalSec / (60 * 60 * 24));
+    const hours = String(
+      Math.floor((totalSec % (60 * 60 * 24)) / 3600)
+    ).padStart(2, "0");
+    const minutes = String(Math.floor((totalSec % 3600) / 60)).padStart(2, "0");
+    const seconds = String(totalSec % 60).padStart(2, "0");
+
+    return `${days > 0 ? `${days}일 ` : ""}${hours}:${minutes}:${seconds}`;
+  };
+
   return (
     <CollectionWrap>
       <div className="title-box">
@@ -190,13 +229,25 @@ const CollectionProd = () => {
       </div>
       <div className="countdown-box">
         <div className="time-bar-border">
-          <div className="time-bar"></div>
+          <div
+            className="time-bar"
+            style={{
+              width: `${progressPercent}%`,
+              transition: "width 1s linear",
+            }}
+          ></div>
         </div>
         <div className="countdown">
-          <span>6일 </span>
-          <span>07:43:30</span> 남음
+          {remainingTime > 0
+            ? `${formatTime(remainingTime)} 남음`
+            : "세일 종료"}
         </div>
-        <div className="end-date">05.14</div>
+        <div className="end-date">
+          {`${(saleEnd.getMonth() + 1).toString().padStart(2, "0")}.${saleEnd
+            .getDate()
+            .toString()
+            .padStart(2, "0")}`}
+        </div>
       </div>
 
       <div className="product-block">
