@@ -2,7 +2,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 // 'user'라는 이름의 상태 만들기
 let user = createSlice({
   name: "user",
-  initialState: { name: "홍길동", age: 20 }, // 처음 상태 값
+  initialState: { name: "29CM's Shop", age: 20 }, // 처음 상태 값
   reducers: {
     changeName(state) {
       // 이름을 '손오공'으로 바꾸는 함수

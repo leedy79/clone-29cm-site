@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addCount, decreaseCount, deleteItem, sortName } from "../store.js";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Header from "../comp/Sticky";
+import Footer from "../comp/Footer";
 
 function Cart() {
   // Redux에서 전체 state를 구조분해할당으로 가져옴
@@ -29,6 +31,7 @@ function Cart() {
 
   return (
     <>
+      <Header />
       <div class="container">
         <div class="row">
           <div class="col-sm-12" style={{ textAlign: "center" }}>
@@ -115,6 +118,7 @@ function Cart() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
