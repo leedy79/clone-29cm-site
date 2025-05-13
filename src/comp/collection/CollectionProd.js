@@ -182,10 +182,10 @@ const CollectionProd = () => {
   const [item, setImg] = useState(data);
   const navigate = useNavigate();
 
-  // 세일 시작과 종료 시간
+  // 할인 시작과 종료 시간
   const now = new Date();
   const saleStart = now;
-  const saleEnd = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7일 후
+  const saleEnd = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
   const totalDuration = saleEnd - saleStart;
 
   const [remainingTime, setRemainingTime] = useState(saleEnd - new Date());

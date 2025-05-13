@@ -85,7 +85,7 @@ let cart = createSlice({
     },
     // 이름순으로 상품 정렬하기
     sortName(state, action) {
-      state.sort((a, b) => (a.title > b.title ? 1 : -1));
+      state.sort((a, b) => (a.name > b.name ? 1 : -1));
     },
   },
 });

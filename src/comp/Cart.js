@@ -8,13 +8,11 @@ import Header from "../comp/Sticky";
 import Footer from "../comp/Footer";
 
 function Cart() {
-  // Redux에서 전체 state를 구조분해할당으로 가져옴
   const {
     user: { name, age },
     cart,
   } = useSelector((state) => state);
 
-  // dispatch는  store.js 로 요청보내주는 함수
   let dispatch = useDispatch();
 
   const smallProdcuctStyle = {

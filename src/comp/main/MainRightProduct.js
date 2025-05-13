@@ -144,7 +144,6 @@ const MainRightProduct = () => {
                   <p>{ele.collection.description}</p>
                 </div>
               </div>
-
               {/* 제품 리스트 */}
               <ul className="product-list">
                 {ele.products.map((product, i) => (
