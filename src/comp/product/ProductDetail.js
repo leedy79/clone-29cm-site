@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import data from "../../db/collectionProd";
-import { useState, useEffect  } from "react";
-import { addItem } from '../../store.js'
-import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { addItem } from "../../store.js";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useLocation, useParams } from "react-router-dom";
 
@@ -670,20 +670,15 @@ const ProductDetail = () => {
     return <div>상품 정보를 불러올 수 없습니다.</div>;
   }
 
-  const { id, brand, image, name, discount, price, likes} = product;
+  const { id, brand, image, name, discount, price, likes } = product;
 
-  const rawPrice = price
-    ? parseInt(price.replace(/,/g, ""), 10)
-    : 0;
+  const rawPrice = price ? parseInt(price.replace(/,/g, ""), 10) : 0;
 
   const discountRate = discount
     ? parseFloat(discount.replace("%", "")) / 100
     : 0;
   const originalPrice = Math.round(rawPrice / (1 - discountRate));
   const formattedPrice = originalPrice.toLocaleString("ko-KR");
-
-
-  
 
   return (
     <>
@@ -722,9 +717,7 @@ const ProductDetail = () => {
             />
             <div className="brand-info-box">
               <h3 className="brand">{brand}</h3>
-              <p className="desc">
-                {brand}는 당신의 삶을 풍요롭게 합니다.
-              </p>
+              <p className="desc">{brand}는 당신의 삶을 풍요롭게 합니다.</p>
               <div className="brand-home">
                 <button className="brand-home-btn">BRAND HOME</button>
               </div>
@@ -744,13 +737,7 @@ const ProductDetail = () => {
                       }
                       alt=""
                     /> */}
-                    <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        "/" + image
-                      }
-                      alt=""
-                    />
+                    <img src={process.env.PUBLIC_URL + "/" + image} alt="" />
                   </div>
                 </li>
                 <li className="img-slider-item">
@@ -889,13 +876,16 @@ const ProductDetail = () => {
             </div>
             <div className="purchase-box-inner-2">
               <div className="price-box">
-                {discount && <span className="prev-price">{formattedPrice}원</span>}
+                {discount && (
+                  <span className="prev-price">{formattedPrice}원</span>
+                )}
                 {discount && <span className="elem-text">첫 구매가</span>}
                 <div className="price-info-box">
                   <div className="price-info-inner">
                     {discount && <span className="sale">{discount}</span>}
                     <span className="price">
-                      {price}<span>원</span>
+                      {price}
+                      <span>원</span>
                     </span>
                   </div>
                 </div>
@@ -921,7 +911,8 @@ const ProductDetail = () => {
                   <div className="price-info-inner">
                     <span className="sale">{discount}</span>
                     <span className="price">
-                      {price}<span>원</span>
+                      {price}
+                      <span>원</span>
                     </span>
                   </div>
                 </div>
@@ -1025,17 +1016,22 @@ const ProductDetail = () => {
                 </div>
               </div>
               <div className="cart-purchase-box">
-                <button className="cart_btn" onClick={() => {
-              dispatch(
-                addItem({
-                  id: id,
-                  image: image,
-                  name: name,
-                  count: 1,
-                })
-              );
-            }}
-            style={{ marginRight: "10px" }}>장바구니 담기</button>
+                <button
+                  className="cart_btn"
+                  onClick={() => {
+                    dispatch(
+                      addItem({
+                        id: id,
+                        image: image,
+                        name: name,
+                        count: 1,
+                      })
+                    );
+                  }}
+                  style={{ marginRight: "10px" }}
+                >
+                  장바구니 담기
+                </button>
                 <button className="purchase_btn">바로 구매하기</button>
               </div>
             </div>
@@ -1095,7 +1091,7 @@ const ProductDetail = () => {
         </section>
         <div className="detail-img-box">
           <img
-            src={process.env.PUBLIC_URL + "/img/detail/detail_" + id +".jpg"}
+            src={process.env.PUBLIC_URL + "/img/detail/detail_" + id + ".jpg"}
             alt=""
           />
         </div>
