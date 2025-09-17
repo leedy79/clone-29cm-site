@@ -228,7 +228,7 @@ const Board = () => {
         {/* 새 글 작성 폼 */}
         {writeOk && (
           <div style={{ marginTop: "30px" }}>
-            <h5 style={{ textAlign: "left" }}>과일농장에게 문의글 남기기</h5>
+            <h5 style={{ textAlign: "left" }}>29CM에 문의글 남기기</h5>
 
             {/* 오류 메시지 표시 */}
             {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
